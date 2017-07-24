@@ -1,0 +1,13 @@
+1) WAP to print below 
+0 1 1 2 3 5 8 .......... upto N times
+take n from user.
+
+2) Factorial of a number
+
+3)  WAP to take two number and calculate greatest commom divisor
+
+4) WAP to find out a number is prime or not
+
+5) WAP to find a number is even or odd 
+
+
