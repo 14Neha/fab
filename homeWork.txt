@@ -10,4 +10,6 @@ take n from user.
 
 5) WAP to find a number is even or odd 
 
+6) Take three number as input from user first is date second is month third is year and print the next date.
+
 
