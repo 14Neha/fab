@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-
+uuuu
   </body>
   <script type="text/javascript">
    
@@ -13,13 +13,19 @@
 1) WAP to print below
  
 0 1 1 2 3 5 8 .......... upto N times
-take n from user.
+take n from user. 
+
 var a= window.prompt("Enter number 1");
-   f=1;
+   y=0;
+   z=1;
+   document.write(y,z);
    for(i=0;i<=a;i++)
     {
-     document.write(i);
-    }*/
+	x= y+z;
+	y=z;
+	z=x;
+     document.write(z);
+    }
 /*	
 2) Factorial of a number
 var a= window.prompt("Enter number 1");
@@ -51,25 +57,37 @@ for(i=1;i<=a;i++)
 	*/
 	
 	/*
-	4) WAP to find out a number is prime or not
-	if (a%a==1 && a%1==a){
-	document.write("a is prime");
+	4) WAP to find out a number is prime or not*/
 	
-	}
-	else{
-	document.write("not a prmie number");
-	}
-	*/
-	/*5) WAP to find a number is even or odd */
+	
+	
+	
+	/*5) WAP to find a number is even or odd 
 	var s= window.prompt("Enter number 1");
 	if(s%2==0){
 	document.write("s is even");
 	}
 	else{
 	document.write("s is odd");
-	}
+	}*/
 	
 	
 	
   </script>
+  
+  <script type="text/javascript">
+  var a= window.prompt("Enter number 1");
+	
+		for(i=1; i<=a/2; i++){
+	if(a%i==0){
+	
+	document.write(a not is prime);
+  break;
+	}
+	else{
+	document.write(a  is prime);
+	}
+	}
+  </script>
+  
 </html>
