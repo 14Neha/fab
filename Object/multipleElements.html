@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="" id="div1">
+
+    </div>
+    <div class="" id="div2">
+
+    </div>
+  </body>
+  <script type="text/javascript">
+  var tt = function () {
+    alert("test");
+  }
+    var ele1 = document.createElement("div");
+    ele1.className="ele1";
+    ele1.id="ele1";
+    ele1.innerHTML = "Hello I am a text in ele1";
+    var ele2 = document.createElement("div");
+    ele2.className="ele2";
+    ele2.appendChild(ele1);
+    document.getElementById("div2").appendChild(ele2);
+  </script>
+</html>
