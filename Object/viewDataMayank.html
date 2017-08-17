@@ -9,15 +9,10 @@
   <body>
   <div id="book">
   </div>
-
   </body>
   <script type="text/javascript">
     console.log(book);
-
-
-
 		for(i=0;i<book.length;i++){
-
 		var a = document.createElement("div");
 		var heading = document.createElement("h3");
 		heading.innerHTML=book[i].Title;
@@ -35,26 +30,7 @@
 			b.className="clearfix";
 			document.getElementById("book").appendChild(b);
 				}
-		/*
-			if(i==3 || i==6 || i==9){
-
-			var b = document.createElement("div");
-			b.className="clearfix";
-			document.getElementById("book").appendChild(b);
-
-				}*/
-
-				document.getElementById("book").appendChild(a);
-
-
-
-
-
-		/*a.innerHTML+=book[i].ID+"<br>";
-		a.innerHTML+=book[i].Title+"<br>";
-	   a.innerHTML+=book[i].Description+"<br>";*/
-
+					document.getElementById("book").appendChild(a);
 	}
-
   </script>
 </html>
