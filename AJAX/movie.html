@@ -43,10 +43,12 @@ for(i=0;i<movie.length;i++){
 
   var a = document.createElement("div");
   var heading = document.createElement("h3");
+
   heading.setAttribute("indexNumber",i);
+
   heading.addEventListener("click",function () {
     document.getElementById("title").innerHTML=movie[this.getAttribute("indexNumber")].OriginalTitle;
-        document.getElementById("body").innerHTML=movie[this.getAttribute("indexNumber")].Description;
+    document.getElementById("body").innerHTML=movie[this.getAttribute("indexNumber")].Description;
   })
   heading.innerHTML=movie[i].OriginalTitle;
   a.appendChild(heading);
