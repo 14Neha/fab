@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<body>
+
+<form novalidate type="post">
+ <label> First name: </label><br>
+  <input type="text" name="firstname" id="fname" value="" onblur="fun()"><br>
+  Last name:<br>
+  <input type="text" name="lastname" >
+  <input type="submit">
+</form>
+
+<script>
+function fun(){
+var name1 = document.getElementById("fname");
+var name11= name1.value;
+if((/[a-z]|[A-Z]{3,14}\D+/).test(name11)){
+alert("validate");
+}
+else{
+
+if (0=name11.indexOf("  "){
+alert('');
+}
+else if((\!\#\$\%\^\&\).test(name11))
+{
+alert("special chracter not allow");
+}
+}
+}
+</script>
+
+</body>
+</html>

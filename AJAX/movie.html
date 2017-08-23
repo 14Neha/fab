@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-  <div id="movie" data-toggle="modal" data-target="#myModal" onclick="myFunction()">
+  <div id="movie" data-toggle="modal" data-target="#myModal" onclick="fun()">
   </div>
 
   
@@ -18,7 +18,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" id="title">Modal Header</h4>
+        <h4 class="modal-title" id="title" >Modal Header</h4>
       </div>
       <div class="modal-body">
         <p>Some text in the modal.</p>
@@ -53,13 +53,15 @@
 		
 
 				document.getElementById("movie").appendChild(a);
-			
-	  
-	}
-	
-	function myFunction() {
-		document.getElementById("demo").innerHTML = movie[i].OriginalTitle;
-	}
+		
+
+	} 
+			function fun() {
+	 	for(i=0;i<movie.length;i++){
+		
+		document.getElementById("title").innerHTML=movie[i].OriginalTitle;
+	}	}
+	fun();
 
   </script>
 </html>
