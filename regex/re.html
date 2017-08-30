@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <title></title>
+<style media="screen">
+
+</style>
 <body>
 
 <form novalidate type="post">
@@ -15,17 +18,25 @@
 function fun(){
 var name1 = document.getElementById("fname");
 var name11= name1.value;
-if((/[a-z]|[A-Z]{3,14}\D+/).test(name11)){
-alert("validate");
+if((/^([a-z]|[A-Z]){3,14}$/).test(name11)){
+  name1.style.boxShadow="2px 2px 2px 2px green";
+   name1.title="Every thing is ok";
 }
 else{
 
-if (0=name11.indexOf("  "){
-alert('');
+if (name11.indexOf(" ")>=0){
+name1.style.boxShadow="2px 2px 2px 2px red";
+name1.title="Space is not allowed";
 }
-else if((\!\#\$\%\^\&\).test(name11))
+if((/[\!\#\$\%\^\&]/).test(name11))
 {
-alert("special chracter not allow");
+  name1.style.boxShadow="5px 5px 5px 10px red";
+   name1.title+=" Symbols are not allowed";
+}
+if(name11.search(/[0-9]/)>=0)
+{
+  name1.style.boxShadow="5px 5px 5px 10px red";
+   name1.title+=" Numbers are not allowed";
 }
 }
 }
