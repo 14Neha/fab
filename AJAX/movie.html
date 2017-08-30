@@ -5,6 +5,13 @@
   <title>Web Bhumi</title>
   <script src="movies1.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style media="screen">
+  body{
+    background: url(1.png),url(2.jpg);
+   background-size: 1px, auto;
+  }
+</style>
+
 </head>
 <body>
   <div id="movie" data-toggle="modal" data-target="#myModal">
@@ -51,6 +58,9 @@ for(i=0;i<movie.length;i++){
     document.getElementById("body").innerHTML=movie[this.getAttribute("indexNumber")].Description;
   })
   heading.innerHTML=movie[i].OriginalTitle;
+  var colo = "rgba("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.random()+")";
+ console.log(colo);
+  heading.style.backgroundColor=colo;
   a.appendChild(heading);
   a.className="col-xs-4";
 
