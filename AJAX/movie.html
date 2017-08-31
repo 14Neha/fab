@@ -16,7 +16,7 @@
 
 
   <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog  modal-lg">
 
       <!-- Modal content-->
       <div class="modal-content">
@@ -24,8 +24,20 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title" id="title" >Modal Header</h4>
         </div>
-        <div class="modal-body" id="body">
-          <p>Some text in the modal.</p>
+        <div class="modal-body" >
+          <p id="body"></p>
+		  <div class="col-sm-3">
+		  <h4 id="h1"></h4>
+		  </div>
+		  <div class="col-sm-3">
+		   <h4 id="h2"></h4>
+		  </div>
+		  <div class="col-sm-3">
+			<h4 id="h3"></h4>
+		  </div>
+		  <div class="col-sm-3">
+		  <h4 id="h4"></h4>
+		  </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -37,6 +49,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+  </body>
 
 </body>
 <script type="text/javascript">
@@ -53,8 +68,13 @@ for(i=0;i<movie.length;i++){
 
   heading.addEventListener("click",function () {
     document.getElementById("title").innerHTML=movie[this.getAttribute("indexNumber")].OriginalTitle;
+<<<<<<< HEAD
     document.getElementById("body").innerHTML=movie[this.getAttribute("indexNumber")].Description;
   });
+=======
+    document.getElementById("body").innerHTML=movie[this.getAttribute("indexNumber")].Description;document.getElementById("h1").innerHTML=movie[this.getAttribute("indexNumber")].Description;document.getElementById("h2").innerHTML=movie[this.getAttribute("indexNumber")].Description;document.getElementById("h3").innerHTML=movie[this.getAttribute("indexNumber")].Description;document.getElementById("h4").innerHTML=movie[this.getAttribute("indexNumber")].Description;
+  })
+>>>>>>> 39b407c1d1c27e919b883b6b4da8372cec4b22bf
   heading.innerHTML=movie[i].OriginalTitle;
  //  var colo = "rgba("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.random()+")";
  // console.log(colo);
@@ -68,12 +88,7 @@ for(i=0;i<movie.length;i++){
 
 
 }
-function fun() {
-  for(i=0;i<movie.length;i++){
 
-    document.getElementById("title").innerHTML=movie[i].OriginalTitle;
-  }	}
-  fun();
 
   </script>
   </html>
