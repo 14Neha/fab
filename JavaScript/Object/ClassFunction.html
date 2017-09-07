@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="" id="main">
+
+    </div>
+    <button type="button" name="button" onclick=""></button>
+  </body>
+<script type="text/javascript">
+  function person(name,age,mobile,address) {
+    this.name=name;
+    this.age=age;
+    this.mobile=mobile;
+    this.address= address;
+    this.showDetails= function () {
+    var ele = document.getElementById("main");
+    main.innerHTML+="name is:- "+this.name+"<br> age:- "+this.age+"<br>";
+    };
+  }
+  var neha = new person("neha",23,9898989899,"Indore");
+  var nidhi = new person("nidhi",22,9898989899,"Indore");
+  var neha1 = Object.create(neha);
+  neha1.name="Neha Rathore";
+  console.log(neha1.name+neha1.age);
+  neha.showDetails();
+  nidhi.showDetails();
+</script>
+
+</html>

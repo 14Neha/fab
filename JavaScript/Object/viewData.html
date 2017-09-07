@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <script src="book.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+  <div id="book">
+  </div>
+
+  </body>
+  <script type="text/javascript">
+    console.log(book);
+
+	
+
+		for(i=0;i<book.length;i++){
+		
+		var a = document.createElement("div");
+		var heading = document.createElement("h3");
+		heading.innerHTML=book[i].label;
+		a.appendChild(heading);
+		var para = document.createElement("p");
+			para.innerHTML=book[i].Description;
+			a.appendChild(para);
+		var image = document.createElement("img");
+			image.src=book[i].Image;
+			a.appendChild(image);
+			a.className="col-xs-4";
+			
+				if(i==i*3){
+				var b = document.createElement("div");
+			b.className="clearfix";
+			document.getElementById("book").appendChild(b);
+				}
+		/*
+			if(i==3 || i==6 || i==9){
+		
+			var b = document.createElement("div");
+			b.className="clearfix";
+			document.getElementById("book").appendChild(b);
+			
+				}*/
+				
+				document.getElementById("book").appendChild(a);
+			
+			
+			
+	
+	
+		/*a.innerHTML+=book[i].ID+"<br>";
+		a.innerHTML+=book[i].Title+"<br>";
+	   a.innerHTML+=book[i].Description+"<br>";*/
+	  
+	}
+
+  </script>
+</html>

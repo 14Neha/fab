@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+  </head>
+  <body>
+    <input id="inp" type="text" name="" value="" onblur="checkMe()">
+     <p id="main"></p>
+  </body>
+<script type="text/javascript">
+  function checkMe() {
+    var ele = document.getElementById("inp").value;
+    if(/[a-z 0-9]+@[a-z]+[.][a-z]{2,3}/.test(ele))
+      {
+          document.getElementById("main").innerHTML= "yay..!!!";
+      }
+      else {
+        document.getElementById("main").innerHTML= "NoooOO";
+
+      }
+  }
+</script>
+</html>
