@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <script src="angular.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="" ng-app="nehaModule">
+<div class="" ng-controller="nehaController">
+      <input type="text" name="" value="" ng-model="name">
+      {{name}}
+</div>
+<div class="" ng-controller="nehaController">
+      <input type="text" name="" value="" ng-model="name">
+      {{name}}
+</div>
+<div class="" ng-controller="WebBhumiController">
+{{name}} {{number}} <input type="text" name="" value="" ng-model="number">
+  <div class="" ng-controller="nehaController">
+    <input type="text" name="" value="" ng-model="name">
+    <input type="text" name="" value="" ng-model="number">
+  </div>
+</div>
+
+    </div>
+  </body>
+
+<script type="text/javascript">
+  var app = angular.module("nehaModule",[]);
+  app.controller("nehaController",function ($scope) {
+    $scope.name="Neha";
+  });
+app.controller("WebBhumiController",function ($scope) {
+  $scope.number = 9999999999;
+})
+</script>
+
+
+</html>
