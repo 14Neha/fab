@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Bhumi</title>
+  <script src="../js/angular.min.js" charset="utf-8"></script>
+  <style media="screen">
+  .bada-div
+  {
+    padding: 100px 50px;
+    background-color: rgba(255, 0, 0, 0.1);
+
+  }
+  </style>
+</head>
+<body>
+  <div class="" ng-app="myModule">
+    <div class="" ng-controller="myController">
+      physics:- <input type="radio" value="physics" name="subject"  checked ng-model="sub">
+      chemistry:- <input type="radio" value="chemistry" name="subject" ng-model="sub">
+      maths:- <input type="radio" value="maths" name="subject" ng-model="sub">
+      <div class="bada-div" ng-show="forPhysics()" >I am a div for physics</div>
+      <div class="bada-div" ng-show="forChemistry()">I am a div for chemistry</div>
+      <div class="bada-div" ng-show="forMaths()">I am a div for Maths</div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+angular.module("myModule",[]);
+angular.module("myModule").controller("myController",function ($scope) {
+  $scope.forPhysics=function () {
+    if($scope.sub=="physics"||(!$scope.sub))
+    {
+      return true;
+    }
+    else {
+      return false;
+    }
+  };
+
+  $scope.forChemistry=function () {
+    if($scope.sub=="chemistry")
+    {
+      return true;
+    }
+    else {
+      return false;
+    }
+  };
+
+$scope.forMaths=function () {
+      if($scope.sub=="maths")
+      {
+        return true;
+      }
+      else {
+        return false;
+      }
+    };
+
+})
+</script>
+
+</html>

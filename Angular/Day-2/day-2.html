@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <script src="../js/angular.min.js" charset="utf-8"></script>
+    <style media="screen">
+      .bada-div
+      {
+        height: 400px;
+        background-color: rgba(255, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="" ng-app="myModule">
+      <div class="" ng-controller="myController">
+        <input type="text" name="" value="" ng-model="neha">
+          <div class="bada-div" ng-show="showMe()">
+              Hello I am a div
+          </div>
+      </div>
+    </div>
+  </body>
+
+
+<script type="text/javascript">
+angular.module("myModule",[]);
+angular.module("myModule").controller("myController",function ($scope) {
+$scope.showMe=function () {
+  if($scope.neha=="Neha Rathore"){
+return true;
+}
+else {
+  return false;
+}
+}
+})
+</script>
+
+
+</html>
