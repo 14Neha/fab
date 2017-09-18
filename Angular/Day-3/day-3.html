@@ -9,6 +9,7 @@
   </head>
   <body ng-app="myModule">
     <div class="" ng-controller="listOfStars">
+  <input type="text" name="" value="" ng-model="searchText">
       <table>
         <thead>
 <th>Title
@@ -21,7 +22,7 @@ Rating
 </th>
         </thead>
 <tbody>
-  <tr ng-repeat="st in stars">
+  <tr ng-repeat="st in stars|filter:searchText">
     <td>{{st.name}}</td>
 			<td>{{st.number}}</td>
 <td style="width:250px">
