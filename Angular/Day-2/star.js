@@ -1,0 +1,1 @@
+var star = [{name:"Neha",number:"001",rating:"5"},{name:"Nidhi",number:"002",rating:"5"},{name:"Nirupama",number:"003",rating:"5"},{name:"Shubham",number:"004",rating:"5"},{name:"Shivam",number:"005",rating:"5"}];
