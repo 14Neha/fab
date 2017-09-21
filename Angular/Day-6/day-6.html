@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Bhumi</title>
+  <script src="../js/angular.js" charset="utf-8"></script>
+  <script src="../js/book.js" charset="utf-8"></script>
+  <style>
+  td,table,th{border:1px solid black;
+    border-collapse:collapse; }
+    </style>
+
+  </head>
+  <body ng-app="WebBhumi">
+
+    <div  ng-controller="classes">
+      <table>
+        <thead>
+          <th ng-click="setSelectedValue('name')">name
+          </th>
+          <th ng-click="setSelectedValue('course')">course
+          </th>
+          <th>covers
+          </th>
+          <th ng-click="setSelectedValue('batch')">batch
+          </th>
+          <th ng-click="setSelectedValue('like')">Like</th>
+          <th ng-click="setSelectedValue('dislike')">Dislike</th>
+        </thead>
+        <tr ng-repeat="student in students|orderBy:selectedValue" ng-init="st.name=student.course">
+          <td>{{student.name}}</td>
+          <td>{{st.name}}</td>
+          <td ng-controller="courses">
+            <ul>
+              <li ng-repeat="course in courses|filter:filterByMe">
+
+                {{course.name}}
+
+                <ul>
+                  <li ng-repeat="subject in course.covers">
+
+                    {{subject.name}}
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </td>
+          <td>{{student.batch}}</td>
+
+          <td ng-click=increseLike(student)>{{student.like}}</td>
+          <td ng-click=increseDisLike(student)> {{student.dislike}}</td>
+        </tr>
+
+
+      </table>
+
+    </div>
+    <script src="day-6.js" charset="utf-8"></script>
+  </body>
+  </html>
