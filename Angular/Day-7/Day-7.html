@@ -46,9 +46,9 @@
 		  <span ng-hide="getSelectedValue('dislike')" ><i class="fa fa-caret-down" aria-hidden="true" ></i>
 </span></th>
         </thead>
-        <tr ng-repeat="student in students|orderBy:selectedValue" ng-init="st.name=student.course">
+        <tr ng-repeat="student in students|orderBy:selectedValue|limitTo:100|sortByMe" ng-init="st.name=student.course">
           <td>{{student.name}}</td>
-          <td>{{st.name}}</td>
+          <td>{{st.name|uppercase}}</td>
           <td ng-controller="courses">
             <ul>
               <li ng-repeat="course in courses|filter:filterByMe">
@@ -66,14 +66,14 @@
           </td>
           <td>{{student.batch}}</td>
 
-          <td ng-click=increseLike(student)>{{student.like}}</td>
-          <td ng-click=increseDisLike(student)> {{student.dislike}}</td>
+          <td ng-click=increseLike(student)>{{student.like|picheCurrency:'dinar'}}</td>
+          <td ng-click=increseDisLike(student)> {{student.dislike|date:'fullDate'|uppercase}}</td>
         </tr>
 
 
       </table>
 
     </div>
-    <script src="day-6.js" charset="utf-8"></script>
+    <script src="day-7.js" charset="utf-8"></script>
   </body>
   </html>
