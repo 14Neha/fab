@@ -13,7 +13,7 @@ var classes=function ($scope) {
     that.dislike++;
   }
 $scope.setSelectedValue=function (value){
-	console.log(value);
+
   if($scope.selectedValue==value)
   {
 	 $scope.selectedValue="-"+value;
@@ -24,11 +24,10 @@ $scope.setSelectedValue=function (value){
 			$scope.selectedValue=value;
 			return false;
   }
-   
-   
+
+
 }
 $scope.getSelectedValue=function (value){
-	console.log(value);
   if($scope.selectedValue==value)
   {
 	return true;
@@ -37,9 +36,21 @@ $scope.getSelectedValue=function (value){
   {
 			return false;
   }
-   
-   
+
+
 }
+
+
+
+$scope.toggle=function (it) {
+  console.log(it.it);
+  if(!it.it)
+  {it.it=true;}
+  else {
+    it.it=null;
+  }
+};
+
 };
 myApp.controller("classes",classes);
 
@@ -55,7 +66,40 @@ var coursesFunc= function($scope) {
     else {
       return false;
     }
-  }
+  };
+
 }
 
 myApp.controller("courses",coursesFunc);
+myApp.filter("limitChar",function() {
+  function functionName(input,upto) {
+    if (!upto) {
+      return input;
+    }
+    else {
+      return input.substring(0,upto);
+    }
+  }
+return functionName;
+});
+
+
+myApp.filter("toHash",function () {
+  return function (item,bol) {
+    if(!bol)
+    {
+      var i = item.length;
+      var str = "";
+      for(j=1;j<=i;j++)
+      {
+        str+="#";
+      }
+      return str;
+    }
+  else {
+    {
+    return item;
+    }
+  }
+  }
+})

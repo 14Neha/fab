@@ -20,14 +20,14 @@
         <thead>
           <th ng-click="setSelectedValue('name')">name
 		  <span ng-show="getSelectedValue('name')"><i class="fa fa-caret-up" aria-hidden="true"></i>
-</span> 
+</span>
 		  <span ng-hide="getSelectedValue('name')" ><i class="fa fa-caret-down" aria-hidden="true" ></i>
 </span>
-		  
+
           </th>
           <th ng-click="setSelectedValue('course')">course
 		  <span ng-show="getSelectedValue('course')"><i class="fa fa-caret-up" aria-hidden="true"></i>
-</span> 
+</span>
 		  <span ng-hide="getSelectedValue('course')" ><i class="fa fa-caret-down" aria-hidden="true" ></i>
 </span>
           </th>
@@ -37,12 +37,12 @@
           </th>
           <th ng-click="setSelectedValue('like')">Like
 		  <span ng-show="getSelectedValue('like')"><i class="fa fa-caret-up" aria-hidden="true"></i>
-</span> 
+</span>
 		  <span ng-hide="getSelectedValue('like')" ><i class="fa fa-caret-down" aria-hidden="true" ></i>
 </span></th>
           <th ng-click="setSelectedValue('dislike')">Dislike
 		  <span ng-show="getSelectedValue('dislike')"><i class="fa fa-caret-up" aria-hidden="true"></i>
-</span> 
+</span>
 		  <span ng-hide="getSelectedValue('dislike')" ><i class="fa fa-caret-down" aria-hidden="true" ></i>
 </span></th>
         </thead>
@@ -58,13 +58,13 @@
                 <ul>
                   <li ng-repeat="subject in course.covers">
 
-                    {{subject.name}}
+                    {{subject.name|limitChar:3}}
                   </li>
                 </ul>
               </li>
             </ul>
           </td>
-          <td>{{student.batch}}</td>
+          <td ng-click="toggle(student)">{{student.batch|toHash:student.it}}</td>
 
           <td ng-click=increseLike(student)>{{student.like}}</td>
           <td ng-click=increseDisLike(student)> {{student.dislike}}</td>
