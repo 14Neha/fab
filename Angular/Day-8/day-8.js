@@ -47,7 +47,7 @@ $scope.toggle=function (it) {
   if(!it.it)
   {it.it=true;}
   else {
-    it.it=null;
+    it.it=false;
   }
 };
 
