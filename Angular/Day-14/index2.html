@@ -11,6 +11,8 @@
  <my-dialog ng-hide="dialogIsHidden" close="hideDialog(message)">
    Check out the contents, {{name}}!
  </my-dialog>
+
+
 </div>
 </body>
 
@@ -33,7 +35,7 @@ angular.module('docsIsoFnBindExample', [])
     restrict: 'E',
     transclude: true,
     scope: {
-      'close': '&'
+      'close': '&'//= 2way binding ---- < one way binding --- @ string ---- & function
     },
     template: ' <a href class="close" ng-click="close({message: \'Bye Bye for Now\'})\" >&times;</a> <div ng-transclude></div>'
   }
