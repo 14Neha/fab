@@ -10,8 +10,8 @@ angular.module("myApp").directive("bio" , function(){
 	return {
 		templateUrl:"personBio.html",
 		scope:{
-			person:"=personData"
+			person:"="
 		}
 	};
-	
+
 })

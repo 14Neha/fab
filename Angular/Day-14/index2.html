@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+  <script src="../js/angular.min.js" charset="utf-8"></script>
+ </head>
+ <body ng-app="docsIsoFnBindExample">
+ <div ng-controller="Controller">
+ {{message}}
+ <my-dialog ng-hide="dialogIsHidden" close="hideDialog(message)">
+   Check out the contents, {{name}}!
+ </my-dialog>
+</div>
+</body>
+
+<script type="text/javascript">
+angular.module('docsIsoFnBindExample', [])
+.controller('Controller', ['$scope', '$timeout', function($scope, $timeout) {
+  $scope.name = 'Web Bhumi';
+  $scope.message = '';
+  $scope.hideDialog = function(message) {
+    $scope.message = message;
+    $scope.dialogIsHidden = true;
+    $timeout(function() {
+      $scope.message = '';
+      $scope.dialogIsHidden = false;
+    }, 2000);
+  };
+}])
+.directive('myDialog', function() {
+  return {
+    restrict: 'E',
+    transclude: true,
+    scope: {
+      'close': '&'
+    },
+    template: ' <a href class="close" ng-click="close({message: \'Bye Bye for Now\'})\" >&times;</a> <div ng-transclude></div>'
+  }
+});
+
+</script>
+</html>
