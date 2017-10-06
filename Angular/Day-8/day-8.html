@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -45,6 +45,8 @@
 </span>
 		  <span ng-hide="getSelectedValue('dislike')" ><i class="fa fa-caret-down" aria-hidden="true" ></i>
 </span></th>
+ <th>Gender
+          </th>
         </thead>
         <tr ng-repeat="student in students|orderBy:selectedValue" ng-init="st.name=student.course">
           <td>{{student.name}}</td>
@@ -68,6 +70,7 @@
 
           <td ng-click=increseLike(student)>{{student.like}}</td>
           <td ng-click=increseDisLike(student)> {{student.dislike}}</td>
+		   <td>{{student.gender|gender}}</td>
         </tr>
 
 

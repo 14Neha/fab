@@ -1,0 +1,6 @@
+1) list of novels name , intro , out of 10 review , review  must be editable by user edit and save +price.
+should be in # and symbol . when hover it will show the acutal price (toggle)(hover-event).
+2) Account number should be in #
+3) AAdmi aurat.
+4)currency conveter.{curent currency API}
+5)distance measure{API}

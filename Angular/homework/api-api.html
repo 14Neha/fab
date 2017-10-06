@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Bhumi</title>
+  <script src="../js/angular.js" charset="utf-8"></script>
+   <body>
+  <div class="" ng-app="myapp" ng-controller="mycontroller">
+  <div ng-repeat="des in descriptions">
+  {{descriptions.swagger}}
+  </div>
+  </div>
+    </body>
+	<script>
+	angular.module("myapp",[]);
+	angular.module("myapp").controller("mycontroller",function($scope,$http){
+$http.get("https://api.predic8.de/shop/").then(function sucess(response) {
+  $scope.descriptions=response.data.description;
+ 
+},function failuer(responseText) {
+
+})	
+	
+	
+	})
+	</script>
+  </html>
