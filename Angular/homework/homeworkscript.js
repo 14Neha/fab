@@ -3,32 +3,37 @@ angular.module("myModule",[]);
 		$scope.novel=novels;
 		
 		$scope.toggle = function(thisfn) {
-			
-			if(!thisfn.thisf){
-				thisfn.thisf=true;
+			console.log(thisfn);
+			if(!thisfn.thisfn){
+				thisfn.thisfn=true;
 				
 			}
 			else {
 				
-				thisfn.thisf=false;
+				thisfn.thisfn=false;
 			}
-		}
-myApp.filter("hash" function(){
-	return function('item',bol){
-		if(!bol){
+		};
+		
+});
+		
+
+	angular.module("myModule").filter("thash", function(){
+	return function(item,bol){
+		item=item+"";
+		var str="";
+		if(!bol)
+		{
 			var i=item.length;
-			var str="";
+			console.log(i);
 			for (j=1;j<=i;j++){
 				str+="#";
-			}
-			return str;
+		}
+		return str;
+		}
+			
 			else {
 				return item;
 			}
 			
 		}
-	}
-	
-})
-		
-		})
+	})	

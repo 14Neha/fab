@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <script src="../js/angular.min.js" charset="utf-8"></script>
+    <script src="Day-9-1.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="" ng-app="myapp">
+      <div class="" ng-controller="mycontroller">
+        <input type="text" name="" value="" ng-model="searchText" placeholder="location">
+        <button type="button" name="button" ng-click="get()"> Search</button>
+
+        <div class="" ng-repeat="re in result">
+          {{re.formatted_address}}
+        </div>
+      </div>
+    </div>
+	<script>
+	angular.module("myapp",[]);
+	angular.module("myapp").controller("mycontroller", function($scope,$http){
+	
+	$scope.get= function(){
+	var url="https://maps.googleapis.com/maps/api/geocode/json?address=";
+	url+=$scope.searchText;
+	 $http.get(url).then(function sucess(response) {
+        $scope.result=response.data.results;
+      },function fail(response) {
+        console.log(response+":(");
+      })
+	}
+	
+	
+	})
+	</script>
+  </body>
+</html>

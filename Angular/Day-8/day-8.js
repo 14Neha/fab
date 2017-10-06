@@ -1,10 +1,10 @@
 var myApp=angular.module("WebBhumi",[]);
 var classes=function ($scope) {
-  var students = [{name:"Raj",course:"Angular",batch:"08:00 pm",like:0,dislike:0 },
-  {name:"Brijesh",course:"Web Design",batch:"12:00 pm",like:23,dislike:0}, {name:"Darshay",course:"Web Design",batch:"11:00 am",like:0,dislike:0}, {name:"Shalini",course:"Web Design",batch:"04:00 pm",like:0,dislike:0},
-  {name:"Aruna",course:"All",batch:"09:00 am",like:0,dislike:0 },
-  {name:"Jayesh",course:"All",batch:"12:00 am",like:0,dislike:0 },
-  {name:"AKhlesh",course:"Angular",batch:"08:00 pm",like:0,dislike:0 }];
+  var students = [{name:"Raj",course:"Angular",batch:"08:00 pm",like:0,dislike:0,gender:"male" },
+  {name:"Brijesh",course:"Web Design",batch:"12:00 pm",like:23,dislike:0,gender:"male"}, {name:"Darshay",course:"Web Design",batch:"11:00 am",like:0,dislike:0,gender:"male"}, {name:"Shalini",course:"Web Design",batch:"04:00 pm",like:0,dislike:0,gender:"female"},
+  {name:"Aruna",course:"All",batch:"09:00 am",like:0,dislike:0,gender:"female" },
+  {name:"Jayesh",course:"All",batch:"12:00 am",like:0,dislike:0,gender:"male" },
+  {name:"AKhlesh",course:"Angular",batch:"08:00 pm",like:0,dislike:0,gender:"male" }];
   $scope.students=students;
   $scope.increseLike=function (that) {
     that.like++;
@@ -103,3 +103,32 @@ myApp.filter("toHash",function () {
   }
   }
 })
+myApp.filter("gender",function(){
+	return function(item){
+		if(item=="male"){
+			return "admi";
+			
+		}
+		else if(item=="female"){
+			return "aurat";
+		}
+		else {
+			return item;
+		}
+		
+	}
+	
+})
+
+
+/*myApp.filter ("chck",function()){
+	return function (item) {
+	if($item.gender=="male"){
+		
+		return $item.gender=admi;
+	}
+	else{
+		return $scope.gender=aurat;
+	}
+	
+}*/

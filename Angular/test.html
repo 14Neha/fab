@@ -7,6 +7,8 @@
     <script src="js/book.js" charset="utf-8"></script>
   </head>
   <body ng-app="myModule">
+  <div ng-controller="localData"> {{person.Name}}</div>
+  
     <div class="" ng-controller="classes">
       <ul ng-repeat="student in students">
         <li>{{student.name}}</li>
@@ -66,7 +68,11 @@
     }
 
     myApp.controller("courses",coursesFunc);
-
+	myApp.controller("localData",function($scope,$http){
+	$http.get("http://localhost/php/test.php").then(function(data){
+	$scope.person=data.data[0];
+	})
+	});
 
 </script>
   </body>
